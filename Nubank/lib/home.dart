@@ -20,12 +20,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.only(
-          top: 30, bottom: 30), // Padding de 30px no topo e no bottom
+          top: 30, bottom: 30), // padding de 30px no top e no bottom
       children: [
         Padding(
+          //padding left e right
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,//colocar os itens pro começo da tela
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,12 +42,12 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-
+                //usando sizedBox pra separar os widgets atuando como margin
               const SizedBox(height: 20),
 
               // Ícones alinhados
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,//deixar um espaçamento entre os icones
                 children: const [
                   Icones(icon: Icons.pix, label: "Área Pix"),
                   Icones(icon: Icons.payment, label: "Pagamentos"),
@@ -56,7 +57,7 @@ class HomeScreen extends StatelessWidget {
               ),
 
               const SizedBox(height: 20),
-
+              //colocando linha horizontal separando os icones do cartão de credito
               Divider(
                 color: Colors.grey,
                 thickness: 1,
@@ -226,7 +227,7 @@ class DescubraMaisCard extends StatelessWidget {
                 ),
                 SizedBox(height: 5),
                 Text(
-                  'Cuide bem do que importa.',
+                  'Cuide bem do que você ama de um jeito simples.',
                   style: TextStyle(fontSize: 18, color: Colors.black54),
                 ),
                 SizedBox(height: 5),
